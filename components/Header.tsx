@@ -9,14 +9,17 @@ const Header = () => {
   return (
     <header className="w-full fixed top-0 left-0 z-50 h-16 border-b border-white/6 bg-white/7 backdrop-blur-md">
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/lumio-logo.png"
             alt="Lumio Logo"
             width={100}
             height={100}
-            className="h-9 w-auto rounded-md"
+            className="h-7 w-auto"
           />
+          <span className="text-2xl uppercase font-semibold leading-relaxed">
+            lumio
+          </span>
         </Link>
 
         <div className="flex items-center gap-5">
