@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { PRICING_PLANS } from "@/lib/constants";
 import { FEATURES, PLACEHOLDERS, SUGGESTIONS } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { SignInButton, useAuth } from "@clerk/nextjs";
+import { PricingTable, SignInButton, useAuth } from "@clerk/nextjs";
 import { ArrowRight, Check, ChevronRight, Zap } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -298,9 +298,31 @@ const page = () => {
         </div>
       </section>
 
+      {/* Pricing Table */}
+      <section className="px-4 pb-32">
+        <div className="mx-auto mb-14 max-w-5xl text-center">
+          <SectionLabel>Pricing</SectionLabel>
+          <SectionHeading gray="Start free," blue="scale when ready." />
 
+          <p className="mx-auto mt-4 max-w-sm text-sm text-white/35">
+            No credit card required. Upgrade or downgrade anytime.
+          </p>
+        </div>
 
-
+        <div className="mx-auto max-w-5xl">
+          <PricingTable
+            checkoutProps={{
+              appearance: {
+                elements: {
+                  drawerRoot: {
+                    zIndex: 2000,
+                  },
+                },
+              },
+            }}
+          />
+        </div>
+      </section>
 
       {/* ── CTA ───────────────────────────────────────────────────────────── */}
       <section className="relative mx-auto mb-32 max-w-5xl overflow-hidden rounded-2xl border border-white/8 px-10 py-24 text-center">
