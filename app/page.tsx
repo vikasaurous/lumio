@@ -47,7 +47,7 @@ const page = () => {
   const handleSubmit = () => {
     if (!prompt.trim() || !isSignedIn) return;
 
-    router.push(`/worspace?prompt=${encodeURIComponent(prompt.trim())}`);
+    router.push(`/workspace?prompt=${encodeURIComponent(prompt.trim())}`);
   };
 
   // Submit on enter , Shift + Enter for new line
